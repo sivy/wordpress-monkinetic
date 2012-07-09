@@ -18,8 +18,14 @@
 #
 cd $BUILD_DIR
 
+echo "BUILD_DIR=$BUILD_DIR"
+echo "WORKING_DIR=$WORKING_DIR"
+echo "DEST_DIR=$DEST_DIR"
+
+echo "running rsync -rvz $BUILD_DIR/* $DEPLOY_DIR/ --exclude 'post-update.sh' --exclude '*.git'"
+
 # cp way
 # cp -R $BUILD_DIR/* $DEPLOY_DIR/
 
 # rsync way - lets me exclude files
-rsync -r $BUILD_DIR/* $DEPLOY_DIR/ --exclude post-update.sh *.git
+# rsync -rvz $BUILD_DIR/* $DEPLOY_DIR/ --exclude 'post-update.sh' --exclude '*.git'
