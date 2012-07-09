@@ -18,8 +18,8 @@
 #
 cd $BUILD_DIR
 
-# old way
+# cp way
 # cp -R $BUILD_DIR/* $DEPLOY_DIR/
 
-# new way
+# rsync way - lets me exclude files
 rsync $BUILD_DIR/* $DEPLOY_DIR/ --exclude post-update.sh *.git
