@@ -22,4 +22,4 @@ cd $BUILD_DIR
 # cp -R $BUILD_DIR/* $DEPLOY_DIR/
 
 # rsync way - lets me exclude files
-rsync $BUILD_DIR/* $DEPLOY_DIR/ --exclude post-update.sh *.git
+rsync -r $BUILD_DIR/* $DEPLOY_DIR/ --exclude post-update.sh *.git
